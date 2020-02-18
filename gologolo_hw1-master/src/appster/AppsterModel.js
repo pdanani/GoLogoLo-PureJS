@@ -1,7 +1,7 @@
 export default class AppsterModel {
     constructor() {
         // THE RECENT WORK LIST
-        this.recentWork = new Array();
+        this.recentWork = new Array();//Array!!! this right here has all the recent workName names that you must cross check 
 
         // THE WORK CURRENTLY BEING EDITED
         this.currentWork = null;
@@ -119,8 +119,19 @@ export default class AppsterModel {
      * can be edited.
      */
     loadNewList() {
-        this.listToEdit = this.createNewWork();
+        this.listToEdit = this.createNewWork();//apparently this is where the chain of methods in which you mmust change start!
         this.prependList(this.listToEdit);
         this.view.loadListData(this.listToEdit);
+    }
+    
+    //Creates a brand new list
+    goList(id){
+        
+        
+        if(!this.recentWork.includes(id)&&id.length>0)
+            this.prependWork(id);
+       
+        //use get recent work as the lsit of current logos that you have to check with 
+//then use append function
     }
 }

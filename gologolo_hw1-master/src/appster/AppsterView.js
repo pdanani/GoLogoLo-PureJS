@@ -450,7 +450,7 @@ export default class AppsterView {
      */
     appendWorkLink(workToAppend) {
         let recentWorkList = document.getElementById(AppsterGUIId.APPSTER_HOME_RECENT_WORK_LIST);
-        let workName = workToAppend.getName();
+        let workName = workToAppend.getName;
         let newA = this.buildWorkListElement(workName);
         recentWorkList.appendChild(newA);
         let newBr = document.createElement(AppsterHTML.BR);
@@ -511,16 +511,16 @@ export default class AppsterView {
    /**
     * This method is for hiding the yes/no dialog.
     */
-   hideDialog() {
-       let dialog = document.getElementById(AppsterGUIId.MODAL_YES_NO_DIALOG);
+   hideDialog(tag) {
+       let dialog = document.getElementById(tag);
        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
    }
 
    /**
     * This method is for showing the yes/no dialog.
     */
-   showDialog() {
-       let dialog = document.getElementById(AppsterGUIId.MODAL_YES_NO_DIALOG);
+   showDialog(tag) {
+       let dialog = document.getElementById(tag);
        dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
    }
 }

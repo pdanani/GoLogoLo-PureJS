@@ -31,6 +31,9 @@ export default class AppsterController {
         // FIRST THE NEW WORK BUTTON ON THE HOME SCREEN
         this.registerEventHandler(AppsterGUIId.APPSTER_HOME_NEW_WORK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CREATE_NEW_WORK]);
 
+        //Enter and canel buttons for create new work
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON,AppsterHTML.CLICK,this[AppsterCallback.APPSTER_PROCESS_ENTER_BUTTON])
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON,AppsterHTML.CLICK,this[AppsterCallback.APPSTER_PROCESS_CANCEL_BUTTON] )
         // THEN THE CONTROLS ON THE EDIT SCREEN
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_HOME_LINK, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_GO_HOME]);
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_TRASH, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_DELETE_WORK]);
@@ -38,6 +41,7 @@ export default class AppsterController {
         // AND THE MODAL BUTTONS
         this.registerEventHandler(AppsterGUIId.DIALOG_YES_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CONFIRM_DELETE_WORK]);
         this.registerEventHandler(AppsterGUIId.DIALOG_NO_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_DELETE_WORK]);
+
     }
 
     /**
@@ -86,13 +90,16 @@ export default class AppsterController {
      * This function is called when the user requests to create
      * new work.
      */
-    processCreateNewWork() {
+    processCreateNewWork=()=> {
         console.log("processCreateNewWork");
 
         // PROMPT FOR THE NAME OF THE NEW LIST
+        this.model.view.showDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
+        
         
         // MAKE A BRAND NEW LIST
-        this.model.goList();
+
+      //  this.model.goList(); 
     }
 
     /**
@@ -122,6 +129,7 @@ export default class AppsterController {
     processCancelDeleteWork() {
         // JUST HIDE THE DIALOG
 
+
     }
 
     /**
@@ -147,7 +155,17 @@ export default class AppsterController {
         // GO BACK TO THE HOME SCREEN
         this.model.goHome();
     }
+    processEnterButton=()=>{ //if the enter button is hit, cross check if has been used before and then add it to the recent work list.
 
+     //   this.model.goList(this.model.view.APPSTER_TEXT_INPUT_MODAL);
+     let workName= document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
+
+            this.model.goList(workName);
+    }
+    processCancelButton=()=>{//cancels the creation of new work.
+        this.model.view.hideDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
+
+    }
     /**
      * This function responds to when the user clicks the trash
      * button, i.e. the delete button, in order to delete the
