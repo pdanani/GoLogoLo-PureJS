@@ -3,17 +3,16 @@ export default class AppsterModel {
         // THE RECENT WORK LIST
         this.recentWork = new Array();//Array!!! this right here has all the recent workName names that you must cross check 
 
-        // THE WORK CURRENTLY BEING EDITED
         this.currentWork = null;
     }
 
-    getCurrentWork(){
+    getCurrentWork() {
         return this.currentWork;
     }
 
-    setRecentWork(currentWork){
-        this.currentWork=currentWork;
-        
+    setRecentWork(currentWork) {
+        this.currentWork = currentWork;
+
     }
     getRecentWork(workName) {
         for (let i = 0; i < this.recentWork.length; i++) {
@@ -42,7 +41,7 @@ export default class AppsterModel {
             this.moveWorkToTop(this.currentWork);
 
             // LOAD DATA INTO THE UI
-            this.view.loadWork(this.currentWork); 
+            this.view.loadWork(this.currentWork);
 
             // CHANGE THE SCREEN
             this.view.goToEditScreen();
@@ -56,10 +55,10 @@ export default class AppsterModel {
             let appWork = this.buildAppWork(jsonData.recent_work, workData.name);
             this.recentWork.push(appWork);
         }
-        
+
         // ALL RECENT WORK HAS BEEN LOADED FROM THE
         // JSON FILE, NOW WE CAN UPDATE THE VIEW
-        this.view.refreshRecentWork(this.recentWork);        
+        this.view.refreshRecentWork(this.recentWork);
     }
 
     /**
@@ -131,6 +130,6 @@ export default class AppsterModel {
         this.prependList(this.listToEdit);
         this.view.loadListData(this.listToEdit);
     }
-    
-  
+
+
 }

@@ -27,7 +27,10 @@ export const AppsterCallback = {
     APPSTER_PROCESS_CONFIRM_DELETE_WORK: "processConfirmDeleteWork",
     APPSTER_PROCESS_CANCEL_DELETE_WORK: "processCancelDeleteWork",
     APPSTER_PROCESS_ENTER_BUTTON: "processEnterButton",
-    APPSTER_PROCESS_CANCEL_BUTTON: "processCancelButton"
+    APPSTER_PROCESS_CANCEL_BUTTON: "processCancelButton",
+    APPSTER_PROCESS_OK_BUTTON: "processOkButton",
+    APPSTER_PROCESS_OK_BUTTON_EMPTY: "processOkButtonEmpty"
+
 };
 
 /**
@@ -96,6 +99,14 @@ export const AppsterGUIId = {
     APPSTER_CONFIRM_MODAL_SECTION: 'appster_confirm_modal_section',
     APPSTER_CONFIRM_MODAL_OK_BUTTON: 'appster_confirm_modal_ok_button',
     APPSTER_CONFIRM_MODAL_FOOTER: 'appster_confirm_frame',
+    
+    APPSTER_CONFIRM_MODAL_EMPTY: 'appster_confirm_modal_empty',
+    APPSTER_CONFIRM_MODAL_FRAME_EMPTY: 'appster_confirm_modal_frame_empty',
+    APPSTER_CONFIRM_MODAL_HEADER_EMPTY: 'appster_confirm_modal_header_empty',
+    APPSTER_CONFIRM_MODAL_SECTION_EMPTY: 'appster_confirm_modal_section_empty',
+    APPSTER_CONFIRM_MODAL_OK_BUTTON_EMPTY: 'appster_confirm_modal_ok_button_empty',
+    APPSTER_CONFIRM_MODAL_FOOTER_EMPTY: 'appster_confirm_frame_empty',
+
     APPSTER_TEXT_INPUT_MODAL: 'appster_text_input_modal',
     APPSTER_TEXT_INPUT_MODAL_FRAME: 'appster_text_input_modal_frame',
     APPSTER_TEXT_INPUT_MODAL_HEADER: 'appster_text_input_modal_header',
@@ -120,7 +131,7 @@ export const AppsterHTML = {
     DATA_ANIMATION: "data-animation",
     DIV: "div",
     HEADER: "header",
-    H1: "h1", H2: "h2", H3: "h3", H4: "h4", H5: "h5", H6: "h6",  
+    H1: "h1", H2: "h2", H3: "h3", H4: "h4", H5: "h5", H6: "h6",
     HIDDEN: "hidden",
     ID: "id",
     INPUT: "input",
@@ -144,7 +155,7 @@ export const AppsterHTML = {
   * use in place of icons. They are easy to use, are language independent,
   * and scale well.
   */
- export const AppsterSymbols = {
+export const AppsterSymbols = {
     DELETE: "&#128465;"     // TRASH SYMBOL
 };
 
@@ -163,6 +174,10 @@ export const AppsterText = {
     APPSTER_CONFIRM_MODAL_PROMPT_TEXT: "appster_confirm_modal_prompt_text",
     APPSTER_CONFIRM_MODAL_OK_BUTTON_TEXT: "appster_confirm_modal_ok_button_text",
     APPSTER_CONFIRM_MODAL_FOOTER_TEXT: "appster_confirm_modal_footer_text",
+    
+    APPSTER_CONFIRM_MODAL_PROMPT_TEXT_EMPTY: "appster_confirm_modal_prompt_text_empty",
+    APPSTER_CONFIRM_MODAL_OK_BUTTON_TEXT_EMPTY: "appster_confirm_modal_ok_button_text_empty",
+    APPSTER_CONFIRM_MODAL_FOOTER_TEXT_EMPTY: "appster_confirm_modal_footer_text_empty",
 
     APPSTER_TEXT_INPUT_MODAL_PROMPT_TEXT: "appster_text_input_modal_prompt_text",
     APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON_TEXT: "appster_text_input_modal_enter_button_text",

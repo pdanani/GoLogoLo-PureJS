@@ -1,5 +1,5 @@
-import {GoLogoLoGUIClass, GoLogoLoGUIId, GoLogoLoText} from './GoLogoLoConstants.js'
-import {AppsterHTML, AppsterSymbols} from '../appster/AppsterConstants.js'
+import { GoLogoLoGUIClass, GoLogoLoGUIId, GoLogoLoText } from './GoLogoLoConstants.js'
+import { AppsterHTML, AppsterSymbols } from '../appster/AppsterConstants.js'
 import AppsterView from '../appster/AppsterView.js'
 
 export default class GoLogoLoView extends AppsterView {
@@ -92,7 +92,7 @@ export default class GoLogoLoView extends AppsterView {
     addListItem(initText) {
         let textList = document.getElementById(RTA_GUIId.RTA_TEXT_LIST);
         let listItemCount = textList.childNodes.length;
-        let newListItem = this.buildElement(AppsterHTML.LI, RTA_GUIId.RTA_TEXT_LIST_ITEM 
+        let newListItem = this.buildElement(AppsterHTML.LI, RTA_GUIId.RTA_TEXT_LIST_ITEM
             + listItemCount);
         newListItem.innerHTML = initText;
         textList.appendChild(newListItem);

@@ -1,4 +1,4 @@
-import {AppsterCallback, AppsterGUIId, AppsterHTML} from './AppsterConstants.js'
+import { AppsterCallback, AppsterGUIId, AppsterHTML } from './AppsterConstants.js'
 
 export default class AppsterController {
     constructor() {
@@ -32,8 +32,8 @@ export default class AppsterController {
         this.registerEventHandler(AppsterGUIId.APPSTER_HOME_NEW_WORK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CREATE_NEW_WORK]);
 
         //Enter and canel buttons for create new work
-        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON,AppsterHTML.CLICK,this[AppsterCallback.APPSTER_PROCESS_ENTER_BUTTON])
-        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON,AppsterHTML.CLICK,this[AppsterCallback.APPSTER_PROCESS_CANCEL_BUTTON] )
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_ENTER_BUTTON])
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_BUTTON])
         // THEN THE CONTROLS ON THE EDIT SCREEN
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_HOME_LINK, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_GO_HOME]);
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_TRASH, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_DELETE_WORK]);
@@ -41,7 +41,12 @@ export default class AppsterController {
         // AND THE MODAL BUTTONS
         this.registerEventHandler(AppsterGUIId.APPSTER_YES_NO_MODAL_YES_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CONFIRM_DELETE_WORK]);
         this.registerEventHandler(AppsterGUIId.APPSTER_YES_NO_MODAL_NO_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_DELETE_WORK]);
+    
+        //OK BUTTONS
+        this.registerEventHandler(AppsterGUIId.APPSTER_CONFIRM_MODAL_OK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_OK_BUTTON]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_CONFIRM_MODAL_OK_BUTTON_EMPTY, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_OK_BUTTON_EMPTY]);
 
+        
     }
 
     /**
@@ -90,12 +95,12 @@ export default class AppsterController {
      * This function is called when the user requests to create
      * new work.
      */
-    processCreateNewWork=()=> {
+    processCreateNewWork = () => {
         console.log("processCreateNewWork");
 
         // PROMPT FOR THE NAME OF THE NEW LIST
         this.model.view.showDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
-    
+
     }
 
     /**
@@ -122,7 +127,7 @@ export default class AppsterController {
      * button in the popup dialog after having requested to delete
      * the loaded work.
      */
-    processCancelDeleteWork=()=> {
+    processCancelDeleteWork = () => {
         // JUST HIDE THE DIALOG
 
         this.model.view.hideDialog(AppsterGUIId.APPSTER_YES_NO_MODAL);
@@ -145,7 +150,7 @@ export default class AppsterController {
      * button in the popup dialog after having requested to delete
      * the loaded work.
      */
-    processConfirmDeleteWork=()=> {
+    processConfirmDeleteWork = () => {
         //remove the dialog box
         this.model.view.hideDialog(AppsterGUIId.APPSTER_YES_NO_MODAL);
         // DELETE THE WORK
@@ -154,18 +159,23 @@ export default class AppsterController {
         // GO BACK TO THE HOME SCREEN
         this.model.goHome();
     }
-    processEnterButton=()=>{ //if the enter button is hit, cross check if has been used before and then add it to the recent work list.
+    processEnterButton = () => { //if the enter button is hit, cross check if has been used before and then add it to the recent work list.
 
         this.model.view.hideDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
 
-     //   this.model.goList(this.model.view.APPSTER_TEXT_INPUT_MODAL);
-     let workString= document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
-
+        //   this.model.goList(this.model.view.APPSTER_TEXT_INPUT_MODAL);
+        let workString = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
+        if(workString=="")
+            this.model.view.showDialog(AppsterGUIId.APPSTER_CONFIRM_MODAL_EMPTY);
+        else if(this.model.getRecentWork(workString)!=null)
+            this.model.view.showDialog(AppsterGUIId.APPSTER_CONFIRM_MODAL);
+        else{
             this.model.goList(workString);
+        }
     }
-    processCancelButton=()=>{//cancels the creation of new work.
+    processCancelButton = () => {//cancels the creation of new work.
         this.model.view.hideDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
-        
+
 
     }
     /**
@@ -173,8 +183,20 @@ export default class AppsterController {
      * button, i.e. the delete button, in order to delete the
      * list being edited.
      */
-    processDeleteWork=()=> {
+    processDeleteWork = () => {
         // VERIFY VIA A DIALOG BOX
         this.model.view.showDialog(AppsterGUIId.APPSTER_YES_NO_MODAL);
     }
+
+    processOkButton=()=>{
+
+        this.model.view.hideDialog(AppsterGUIId.APPSTER_CONFIRM_MODAL);
+
+    }
+    processOkButtonEmpty=()=>{
+
+        this.model.view.hideDialog(AppsterGUIId.APPSTER_CONFIRM_MODAL_EMPTY);
+
+    }
+
 }

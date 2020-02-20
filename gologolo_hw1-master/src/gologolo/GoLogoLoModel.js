@@ -45,20 +45,20 @@ export default class GoLogoLoModel extends AppsterModel {
     }
 
     updateText() {
- //       this.view.
+        //       this.view.
     }
-    goList(stringID){
-        
-        if(this.getRecentWork(stringID)==null&&(!stringID=="")){
-            let logo= new GoLogoLoLogo(stringID);
+    goList(stringID) {
 
-            this.prependWork(logo);    
+        if (this.getRecentWork(stringID) == null && (!stringID == "")) {
+            let logo = new GoLogoLoLogo(stringID);
+
+            this.prependWork(logo);
         }
-            
-        else{
+
+        else {
             return;
-        } 
+        }
         //use get recent work as the lsit of current logos that you have to check with 
-//then use append function
+        //then use append function
     }
 }
