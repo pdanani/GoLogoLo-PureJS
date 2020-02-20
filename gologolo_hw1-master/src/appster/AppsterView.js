@@ -450,7 +450,7 @@ export default class AppsterView {
      */
     appendWorkLink(workToAppend) {
         let recentWorkList = document.getElementById(AppsterGUIId.APPSTER_HOME_RECENT_WORK_LIST);
-        let workName = workToAppend.getName;
+        let workName = workToAppend.getName();
         let newA = this.buildWorkListElement(workName);
         recentWorkList.appendChild(newA);
         let newBr = document.createElement(AppsterHTML.BR);

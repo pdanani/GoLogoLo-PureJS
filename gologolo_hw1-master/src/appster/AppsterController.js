@@ -95,11 +95,7 @@ export default class AppsterController {
 
         // PROMPT FOR THE NAME OF THE NEW LIST
         this.model.view.showDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
-        
-        
-        // MAKE A BRAND NEW LIST
-
-      //  this.model.goList(); 
+    
     }
 
     /**
@@ -158,9 +154,9 @@ export default class AppsterController {
     processEnterButton=()=>{ //if the enter button is hit, cross check if has been used before and then add it to the recent work list.
 
      //   this.model.goList(this.model.view.APPSTER_TEXT_INPUT_MODAL);
-     let workName= document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
+     let workString= document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
 
-            this.model.goList(workName);
+            this.model.goList(workString);
     }
     processCancelButton=()=>{//cancels the creation of new work.
         this.model.view.hideDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);

@@ -125,13 +125,5 @@ export default class AppsterModel {
     }
     
     //Creates a brand new list
-    goList(id){
-        
-        
-        if(!this.recentWork.includes(id)&&id.length>0)
-            this.prependWork(id);
-       
-        //use get recent work as the lsit of current logos that you have to check with 
-//then use append function
-    }
+  
 }
