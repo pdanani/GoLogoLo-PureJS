@@ -122,9 +122,10 @@ export default class AppsterController {
      * button in the popup dialog after having requested to delete
      * the loaded work.
      */
-    processCancelDeleteWork() {
+    processCancelDeleteWork=()=> {
         // JUST HIDE THE DIALOG
 
+        this.model.view.hideDialog(AppsterGUIId.APPSTER_YES_NO_MODAL);
 
     }
 
@@ -144,9 +145,11 @@ export default class AppsterController {
      * button in the popup dialog after having requested to delete
      * the loaded work.
      */
-    processConfirmDeleteWork() {
+    processConfirmDeleteWork=()=> {
+             //let workString= document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
+
         // DELETE THE WORK
-        this.model.removeWork(this.model.getWorkToEdit());
+        this.model.removeWork(this.model.getWorkToEdit());//I think this has to be changed to .currentWork
 
         // GO BACK TO THE HOME SCREEN
         this.model.goHome();
@@ -160,6 +163,7 @@ export default class AppsterController {
     }
     processCancelButton=()=>{//cancels the creation of new work.
         this.model.view.hideDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
+        
 
     }
     /**
@@ -167,8 +171,8 @@ export default class AppsterController {
      * button, i.e. the delete button, in order to delete the
      * list being edited.
      */
-    processDeleteWork() {
+    processDeleteWork=()=> {
         // VERIFY VIA A DIALOG BOX
-        window.todo.model.view.showDialog();
+        this.model.view.showDialog(AppsterGUIId.APPSTER_YES_NO_MODAL);
     }
 }

@@ -30,7 +30,7 @@ export default class AppsterModel {
 
         if (work) {
             // SET IT AS THE WORK WE ARE EDITING
-            this.workToEdit = work;
+            this.workToEdit = work;             //TAG I think this has to be changed to currentWork....
             this.moveWorkToTop(this.workToEdit);
 
             // LOAD DATA INTO THE UI
