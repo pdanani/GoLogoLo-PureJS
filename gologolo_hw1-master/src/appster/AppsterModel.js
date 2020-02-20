@@ -7,6 +7,14 @@ export default class AppsterModel {
         this.currentWork = null;
     }
 
+    getCurrentWork(){
+        return this.currentWork;
+    }
+
+    setRecentWork(currentWork){
+        this.currentWork=currentWork;
+        
+    }
     getRecentWork(workName) {
         for (let i = 0; i < this.recentWork.length; i++) {
             let testWork = this.recentWork[i];
@@ -30,11 +38,11 @@ export default class AppsterModel {
 
         if (work) {
             // SET IT AS THE WORK WE ARE EDITING
-            this.workToEdit = work;             //TAG I think this has to be changed to currentWork....
-            this.moveWorkToTop(this.workToEdit);
+            this.currentWork = work;             //TAG I think this has to be changed to currentWork....
+            this.moveWorkToTop(this.currentWork);
 
             // LOAD DATA INTO THE UI
-            this.view.loadWork(this.workToEdit); 
+            this.view.loadWork(this.currentWork); 
 
             // CHANGE THE SCREEN
             this.view.goToEditScreen();
@@ -124,6 +132,5 @@ export default class AppsterModel {
         this.view.loadListData(this.listToEdit);
     }
     
-    //Creates a brand new list
   
 }

@@ -39,8 +39,8 @@ export default class AppsterController {
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_TRASH, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_DELETE_WORK]);
 
         // AND THE MODAL BUTTONS
-        this.registerEventHandler(AppsterGUIId.DIALOG_YES_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CONFIRM_DELETE_WORK]);
-        this.registerEventHandler(AppsterGUIId.DIALOG_NO_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_DELETE_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_YES_NO_MODAL_YES_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CONFIRM_DELETE_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_YES_NO_MODAL_NO_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_DELETE_WORK]);
 
     }
 
@@ -146,15 +146,17 @@ export default class AppsterController {
      * the loaded work.
      */
     processConfirmDeleteWork=()=> {
-             //let workString= document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
-
+        //remove the dialog box
+        this.model.view.hideDialog(AppsterGUIId.APPSTER_YES_NO_MODAL);
         // DELETE THE WORK
-        this.model.removeWork(this.model.getWorkToEdit());//I think this has to be changed to .currentWork
+        this.model.removeWork(this.model.getCurrentWork());//I think this has to be changed to .currentWork
 
         // GO BACK TO THE HOME SCREEN
         this.model.goHome();
     }
     processEnterButton=()=>{ //if the enter button is hit, cross check if has been used before and then add it to the recent work list.
+
+        this.model.view.hideDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
 
      //   this.model.goList(this.model.view.APPSTER_TEXT_INPUT_MODAL);
      let workString= document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
