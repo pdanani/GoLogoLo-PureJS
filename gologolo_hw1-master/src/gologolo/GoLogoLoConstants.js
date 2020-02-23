@@ -68,10 +68,10 @@ export const GoLogoLoText = {
 
     //edit text modal
     
-    GOLOGOLO_EDIT_MODAL_PROMPT_TEXT: "gologolo_text_input_modal_prompt_text",
-       GOLOGOLO_EDIT_MODAL_ENTER_TEXT : "gologolo_text_input_modal_enter_button_text",
-       GOLOGOLO_EDIT_MODAL_CANCEL_TEXT: "gologolo_text_input_modal_cancel_button_text",
-        GOLOGOLO_EDIT_MODAL_FOOTER_TEXT: "gologolo_text_input_modal_footer_text"
+    GOLOGOLO_TEXT_INPUT_MODAL_PROMPT_TEXT: "gologolo_text_input_modal_prompt_text",
+    GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON_TEXT : "gologolo_text_input_modal_enter_button_text",
+    GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON_TEXT: "gologolo_text_input_modal_cancel_button_text",
+    GOLOGOLO_TEXT_INPUT_MODAL_FOOTER_TEXT: "gologolo_text_input_modal_footer_text"
 
 
 

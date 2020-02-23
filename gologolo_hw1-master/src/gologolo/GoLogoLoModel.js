@@ -45,8 +45,9 @@ export default class GoLogoLoModel extends AppsterModel {
         return appWork;
     }
 
-    updateText() {
-//
+    updateText=()=> {
+        this.view.showDialog(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL);//i am here!!!
+
     }
     goList(stringID) {
 

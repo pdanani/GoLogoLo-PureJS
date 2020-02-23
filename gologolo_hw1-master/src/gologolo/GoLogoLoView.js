@@ -6,6 +6,7 @@ export default class GoLogoLoView extends AppsterView {
     constructor() {
         super();
     }
+    
 
     fillAppWorkspace(workspace) {
         let colorPickerAttributes = [];
@@ -54,7 +55,7 @@ export default class GoLogoLoView extends AppsterView {
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_MARGIN_TEXT));
         toolbar.appendChild(marginSlider);
 
-        let modal=this.buildGoLogoLoEditTextInputModal();
+        let modal=this.buildGoLogoLoEditTextInputModal(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL,GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL_FRAME,GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL_HEADER);
 
 
         workspace.appendChild(toolbar);
