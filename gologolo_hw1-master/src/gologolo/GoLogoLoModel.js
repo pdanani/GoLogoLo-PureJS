@@ -1,6 +1,7 @@
 import AppsterModel from '../appster/AppsterModel.js'
 import GoLogoLoLogo from './GoLogoLoLogo.js'
 import { GoLogoLoGUIId } from './GoLogoLoConstants.js';
+import { AppsterGUIId } from '../appster/AppsterConstants.js';
 
 export default class GoLogoLoModel extends AppsterModel {
     constructor() {
@@ -45,8 +46,9 @@ export default class GoLogoLoModel extends AppsterModel {
         return appWork;
     }
 
-    updateText=()=> {
-        this.view.showDialog(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL);//i am here!!!
+    updateText=(work,newText)=> {
+        work.setText(newText);
+        this.view.hideDialog(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL);
 
     }
     goList(stringID) {

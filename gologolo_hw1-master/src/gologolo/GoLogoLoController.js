@@ -25,4 +25,21 @@ export default class GoLogoLoController
         
        // this.model.updateText();
     }
+    processEditEnter=()=>{
+        this.model.view.hideDialog(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL);
+
+        //   this.model.goList(this.model.view.APPSTER_TEXT_INPUT_MODAL);
+        let newText = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL_TEXTFIELD).value;
+        if(newText=="")//empty?
+            this.model.view.showDialog(AppsterGUIId.APPSTER_CONFIRM_MODAL_EMPTY);
+        else{
+            this.model.updateText(this.model.getCurrentWork(),newText);
+        }
+
+    }
+
+    processEditCancel=()=>{
+        this.model.view.hideDialog(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL);
+
+    }
 }
