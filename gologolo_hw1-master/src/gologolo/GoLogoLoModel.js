@@ -48,7 +48,9 @@ export default class GoLogoLoModel extends AppsterModel {
 
     updateText=(work,newText)=> {
         work.setText(newText);
+        
         this.view.hideDialog(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL);
+
 
     }
     goList(stringID) {

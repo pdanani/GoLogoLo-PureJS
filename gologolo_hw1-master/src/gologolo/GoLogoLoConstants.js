@@ -22,7 +22,9 @@ export const GoLogoLoCallback = {
      // CONTROLS ARE DECLARED INSIDE index.html
      GOLOGOLO_PROCESS_EDIT_TEXT: "processEditText",
      GOLOGOLO_PROCESS_EDIT_ENTER_BUTTON: "processEditEnter",
-     GOLOGOLO_PROCESS_EDIT_CANCEL_BUTTON: "processEditCancel"
+     GOLOGOLO_PROCESS_EDIT_CANCEL_BUTTON: "processEditCancel",
+     
+     GOLOGOLO_PROCESS_FONT_SIZE_SLIDER: "processFontSlider"
 
 }
 export const GoLogoLoGUIId = {
