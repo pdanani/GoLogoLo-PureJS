@@ -32,7 +32,13 @@
         {"gologolo_border_radius_text": "Border Radius: "},
         {"gologolo_border_thickness_text": "Border Thickness: "},
         {"gologolo_padding_text": "Padding: "},
-        {"gologolo_margin_text": "Margin: "}
+        {"gologolo_margin_text": "Margin: "},
+
+        {"gologolo_text_input_modal_prompt_text": "Edit Logo Text: "},
+        {"gologolo_text_input_modal_enter_button_text": "Enter"},
+        {"gologolo_text_input_modal_cancel_button_text": "Cancel"},
+        {"gologolo_text_input_modal_footer_text": "Changing Logo Text"}
+
     ],
     "recent_work": [
         {

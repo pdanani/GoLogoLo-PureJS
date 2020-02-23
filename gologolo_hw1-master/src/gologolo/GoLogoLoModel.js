@@ -1,5 +1,6 @@
 import AppsterModel from '../appster/AppsterModel.js'
 import GoLogoLoLogo from './GoLogoLoLogo.js'
+import { GoLogoLoGUIId } from './GoLogoLoConstants.js';
 
 export default class GoLogoLoModel extends AppsterModel {
     constructor() {
@@ -45,7 +46,7 @@ export default class GoLogoLoModel extends AppsterModel {
     }
 
     updateText() {
-        //       this.view.
+//
     }
     goList(stringID) {
 

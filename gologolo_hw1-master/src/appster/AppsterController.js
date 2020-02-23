@@ -46,6 +46,8 @@ export default class AppsterController {
         this.registerEventHandler(AppsterGUIId.APPSTER_CONFIRM_MODAL_OK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_OK_BUTTON]);
         this.registerEventHandler(AppsterGUIId.APPSTER_CONFIRM_MODAL_OK_BUTTON_EMPTY, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_OK_BUTTON_EMPTY]);
 
+        //Edit Text
+         
         
     }
 
@@ -188,12 +190,12 @@ export default class AppsterController {
         this.model.view.showDialog(AppsterGUIId.APPSTER_YES_NO_MODAL);
     }
 
-    processOkButton=()=>{
+    processOkButton=()=>{// to deal with duplicates
 
         this.model.view.hideDialog(AppsterGUIId.APPSTER_CONFIRM_MODAL);
 
     }
-    processOkButtonEmpty=()=>{
+    processOkButtonEmpty=()=>{// to deal with empty inputs on new work e
 
         this.model.view.hideDialog(AppsterGUIId.APPSTER_CONFIRM_MODAL_EMPTY);
 
