@@ -23,7 +23,7 @@ export const GoLogoLoCallback = {
      GOLOGOLO_PROCESS_EDIT_TEXT: "processEditText",
      GOLOGOLO_PROCESS_EDIT_ENTER_BUTTON: "processEditEnter",
      GOLOGOLO_PROCESS_EDIT_CANCEL_BUTTON: "processEditCancel",
-     
+     //slider
      GOLOGOLO_PROCESS_FONT_SIZE_SLIDER: "processFontSlider"
 
 }

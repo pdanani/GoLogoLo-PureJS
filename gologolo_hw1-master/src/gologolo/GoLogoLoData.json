@@ -15,7 +15,7 @@
         {"appster_confirm_modal_ok_button_text": "Ok"},
         {"appster_confirm_modal_footer_text": "Duplicate Name"},
 
-        {"appster_confirm_modal_prompt_text_empty": "Illegal name, must be at least one character"},
+        {"appster_confirm_modal_prompt_text_empty": "Illegal, must be at least one character"},
         {"appster_confirm_modal_ok_button_text_empty": "Ok"},
         {"appster_confirm_modal_footer_text_empty": "Too Short"},
         
