@@ -5,7 +5,7 @@ export const GoLogoLoDefaults = {
     GOLOGOLO_DEFAULT_TEXT_COLOR: "#000000",
     GOLOGOLO_DEFAULT_BACKGROUND_COLOR: "#cccc44",
     GOLOGOLO_DEFAULT_BORDER_COLOR: "#444444",
-   // GOLOGOLO_DEFAULT_BORDER_RADIUS: "5px",
+    GOLOGOLO_DEFAULT_BORDER_RADIUS: "5",
     GOLOGOLO_DEFAULT_BORDER_THICKNESS: "2",
     GOLOGOLO_DEFAULT_BORDER_TYPE: "solid",
     GOLOGOLO_DEFAULT_PADDING: "5",
@@ -14,26 +14,26 @@ export const GoLogoLoDefaults = {
 
 export const GoLogoLoGUIClass = {
     GOLOGOLO_CONTROL_PROMPT: 'gologolo_control_prompt',
-    
+
 };
 
 
 export const GoLogoLoCallback = {
-     // CONTROLS ARE DECLARED INSIDE index.html
-     GOLOGOLO_PROCESS_EDIT_TEXT: "processEditText",
-     GOLOGOLO_PROCESS_EDIT_ENTER_BUTTON: "processEditEnter",
-     GOLOGOLO_PROCESS_EDIT_CANCEL_BUTTON: "processEditCancel",
-     //slider
-     GOLOGOLO_PROCESS_FONT_SIZE_SLIDER: "processFontSlider",
-     GOLOGOLO_PROCESS_TEXT_COLOR_PICKER: "processTextColor",
-     GOLOGOLO_PROCESS_BACKGROUND_COLOR_PICKER: "processBackgroundColor",
-     GOLOGOLO_PROCESS_BORDER_COLOR_PICKER: "processBorderColor",
-     GOLOGOLO_PROCESS_BORDER_RADIUS_SLIDER: "processBorderRadius",
-     GOLOGOLO_PROCESS_BORDER_THICKNESS_SLIDER: "processBorderThickness",
+    // CONTROLS ARE DECLARED INSIDE index.html
+    GOLOGOLO_PROCESS_EDIT_TEXT: "processEditText",
+    GOLOGOLO_PROCESS_EDIT_ENTER_BUTTON: "processEditEnter",
+    GOLOGOLO_PROCESS_EDIT_CANCEL_BUTTON: "processEditCancel",
+    //slider
+    GOLOGOLO_PROCESS_FONT_SIZE_SLIDER: "processFontSlider",
+    GOLOGOLO_PROCESS_TEXT_COLOR_PICKER: "processTextColor",
+    GOLOGOLO_PROCESS_BACKGROUND_COLOR_PICKER: "processBackgroundColor",
+    GOLOGOLO_PROCESS_BORDER_COLOR_PICKER: "processBorderColor",
+    GOLOGOLO_PROCESS_BORDER_RADIUS_SLIDER: "processBorderRadius",
+    GOLOGOLO_PROCESS_BORDER_THICKNESS_SLIDER: "processBorderThickness",
 
-     //padding and margin
-     GOLOGOLO_PROCESS_PADDING_SLIDER: "processPadding",
-     GOLOGOLO_PROCESS_MARGIN_SLIDER:"processMargin"
+    //padding and margin
+    GOLOGOLO_PROCESS_PADDING_SLIDER: "processPadding",
+    GOLOGOLO_PROCESS_MARGIN_SLIDER: "processMargin"
 
 }
 export const GoLogoLoGUIId = {
@@ -50,16 +50,16 @@ export const GoLogoLoGUIId = {
     GOLOGOLO_TEXT: "gologolo_text",
     //added by me for edit work buttons
     //GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON: "gologolo_edit_enter",
-  //  GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON:"gologolo_edit_cancel",
-   
-GOLOGOLO_TEXT_INPUT_MODAL: 'gologolo_text_input_modal',
-GOLOGOLO_TEXT_INPUT_MODAL_FRAME: 'gologolo_text_input_modal_frame',
-GOLOGOLO_TEXT_INPUT_MODAL_HEADER: 'gologolo_text_input_modal_header',
-GOLOGOLO_TEXT_INPUT_MODAL_SECTION: 'gologolo_text_input_modal_section',
-GOLOGOLO_TEXT_INPUT_MODAL_TEXTFIELD: "gologolo_text_input_modal_textfield",
-GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON: 'gologolo_text_input_modal_enter_button',
-GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON: 'gologolo_text_input_modal_cancel_button',
-GOLOGOLO_TEXT_INPUT_MODAL_FOOTER: 'gologolo_text_input_modal_footer'
+    //  GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON:"gologolo_edit_cancel",
+
+    GOLOGOLO_TEXT_INPUT_MODAL: 'gologolo_text_input_modal',
+    GOLOGOLO_TEXT_INPUT_MODAL_FRAME: 'gologolo_text_input_modal_frame',
+    GOLOGOLO_TEXT_INPUT_MODAL_HEADER: 'gologolo_text_input_modal_header',
+    GOLOGOLO_TEXT_INPUT_MODAL_SECTION: 'gologolo_text_input_modal_section',
+    GOLOGOLO_TEXT_INPUT_MODAL_TEXTFIELD: "gologolo_text_input_modal_textfield",
+    GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON: 'gologolo_text_input_modal_enter_button',
+    GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON: 'gologolo_text_input_modal_cancel_button',
+    GOLOGOLO_TEXT_INPUT_MODAL_FOOTER: 'gologolo_text_input_modal_footer'
 
 
 
@@ -78,9 +78,9 @@ export const GoLogoLoText = {
 
 
     //edit text modal
-    
+
     GOLOGOLO_TEXT_INPUT_MODAL_PROMPT_TEXT: "gologolo_text_input_modal_prompt_text",
-    GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON_TEXT : "gologolo_text_input_modal_enter_button_text",
+    GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON_TEXT: "gologolo_text_input_modal_enter_button_text",
     GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON_TEXT: "gologolo_text_input_modal_cancel_button_text",
     GOLOGOLO_TEXT_INPUT_MODAL_FOOTER_TEXT: "gologolo_text_input_modal_footer_text"
 

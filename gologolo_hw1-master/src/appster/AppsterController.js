@@ -88,7 +88,7 @@ export default class AppsterController {
         this.model.goHome();
     }
 
-    processGoEdit(workToEdit) {
+    processGoEdit=(workToEdit)=> {
         console.log("processGoEdit");
         this.model.goEdit(workToEdit);
     }
@@ -99,7 +99,7 @@ export default class AppsterController {
      */
     processCreateNewWork = () => {
         console.log("processCreateNewWork");
-
+        document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value="";
         // PROMPT FOR THE NAME OF THE NEW LIST
         this.model.view.showDialog(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
 
@@ -172,7 +172,8 @@ export default class AppsterController {
         else if(this.model.getRecentWork(workString)!=null)
             this.model.view.showDialog(AppsterGUIId.APPSTER_CONFIRM_MODAL);
         else{
-            this.model.goList(workString);
+           this.model.goList(workString);
+           this.model.editWork(workString);
         }
     }
     processCancelButton = () => {//cancels the creation of new work.

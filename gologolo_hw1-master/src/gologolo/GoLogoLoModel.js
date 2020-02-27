@@ -54,17 +54,8 @@ export default class GoLogoLoModel extends AppsterModel {
 
     }
     goList(stringID) {
-
-        if (this.getRecentWork(stringID) == null && (!stringID == "")) {
-            let logo = new GoLogoLoLogo(stringID);
-
-            this.prependWork(logo);
-        }
-
-        else {
-            return;
-        }
-        //use get recent work as the lsit of current logos that you have to check with 
-        //then use append function
+        let logo = new GoLogoLoLogo(stringID);
+        this.prependWork(logo);
     }
+   
 }
