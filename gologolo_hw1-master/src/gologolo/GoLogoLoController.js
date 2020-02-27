@@ -34,7 +34,7 @@ export default class GoLogoLoController
         else{
             this.model.updateText(this.model.getCurrentWork(),newText);
             
-            this.model.view.loadWork(this.model.getCurrentWork());
+            this.model.view.loadWork(this.model.getCurrentWork()); //refresh the work page
 
         }
 
@@ -42,9 +42,16 @@ export default class GoLogoLoController
 
     processEditCancel=()=>{
         this.model.view.hideDialog(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL);
+
     }
 
     processFontSlider=()=>{//slider
         console.log("FontSlider");
+
+        let sliderValue=document.getElementById(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER).value
+        
+        this.model.getCurrentWork().setFontSize(sliderValue);
+        this.model.view.loadWork(this.model.getCurrentWork());
+
     }
 }
