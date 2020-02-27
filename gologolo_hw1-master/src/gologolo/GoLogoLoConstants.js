@@ -8,8 +8,8 @@ export const GoLogoLoDefaults = {
    // GOLOGOLO_DEFAULT_BORDER_RADIUS: "5px",
     GOLOGOLO_DEFAULT_BORDER_THICKNESS: "2",
     GOLOGOLO_DEFAULT_BORDER_TYPE: "solid",
-    GOLOGOLO_DEFAULT_PADDING: 5,
-    GOLOGOLO_DEFAULT_MARGIN: 10,
+    GOLOGOLO_DEFAULT_PADDING: "5",
+    GOLOGOLO_DEFAULT_MARGIN: "10",
 };
 
 export const GoLogoLoGUIClass = {
@@ -29,7 +29,11 @@ export const GoLogoLoCallback = {
      GOLOGOLO_PROCESS_BACKGROUND_COLOR_PICKER: "processBackgroundColor",
      GOLOGOLO_PROCESS_BORDER_COLOR_PICKER: "processBorderColor",
      GOLOGOLO_PROCESS_BORDER_RADIUS_SLIDER: "processBorderRadius",
-     GOLOGOLO_PROCESS_BORDER_THICKNESS_SLIDER: "processBorderThickness"
+     GOLOGOLO_PROCESS_BORDER_THICKNESS_SLIDER: "processBorderThickness",
+
+     //padding and margin
+     GOLOGOLO_PROCESS_PADDING_SLIDER: "processPadding",
+     GOLOGOLO_PROCESS_MARGIN_SLIDER:"processMargin"
 
 }
 export const GoLogoLoGUIId = {

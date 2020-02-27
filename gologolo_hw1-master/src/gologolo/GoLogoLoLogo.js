@@ -71,7 +71,7 @@ export default class GoLogoLoLogo extends AppWork {
     }
 
     setPadding(initPadding) {
-        this.padding = initPadding;
+        this.padding = initPadding+"px";
     }
 
     getPadding() {
@@ -79,7 +79,7 @@ export default class GoLogoLoLogo extends AppWork {
     }
 
     setMargin(initMargin) {
-        this.margin = initMargin;
+        this.margin = initMargin+"px";
     }
 
     getMargin() {

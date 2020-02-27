@@ -22,6 +22,8 @@ export default class GoLogoLoController
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_COLOR_PICKER]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_RADIUS_SLIDER]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_THICKNESS_SLIDER]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_PADDING_SLIDER]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_MARGIN_SLIDER]);
 
 
     }   
@@ -92,4 +94,15 @@ export default class GoLogoLoController
         this.model.getCurrentWork().setBorderThickness(sliderValue);
         this.model.view.loadWork(this.model.getCurrentWork());
     }
+    processPadding=()=>{
+        let sliderValue=document.getElementById(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER).value;
+        this.model.getCurrentWork().setPadding(sliderValue);
+        this.model.view.loadWork(this.model.getCurrentWork());
+    }
+    processMargin=()=>{
+        let sliderValue=document.getElementById(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER).value;
+        this.model.getCurrentWork().setMargin(sliderValue);
+        this.model.view.loadWork(this.model.getCurrentWork());
+    }
+
 }
