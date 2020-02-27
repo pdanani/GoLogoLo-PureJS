@@ -55,7 +55,7 @@ export default class GoLogoLoLogo extends AppWork {
     }
 
     setBorderRadius(initBorderRadius) {
-        this.borderRadius = initBorderRadius;
+        this.borderRadius = initBorderRadius+"px";
     }
 
     getBorderRadius() {
@@ -63,7 +63,7 @@ export default class GoLogoLoLogo extends AppWork {
     }
 
     setBorderThickness(initBorderThickness) {
-        this.borderThickness = initBorderThickness;
+        this.borderThickness = initBorderThickness+"px";
     }
 
     getBorderThickness() {

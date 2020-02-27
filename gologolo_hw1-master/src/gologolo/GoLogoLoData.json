@@ -48,7 +48,7 @@
             "text_color": "#123456",
             "background_color": "#654321",
             "border_color": "#abcdef",
-            "border_radius": 15,
+            "border_radius": "15px",
             "border_thickness": 2,
             "padding": 20,
             "margin": 10
@@ -60,7 +60,7 @@
             "text_color": "#13579b",
             "background_color": "#b97531",
             "border_color": "#004488",
-            "border_radius": 10,
+            "border_radius": "10px",
             "border_thickness": 5,
             "padding": 5,
             "margin": 5
@@ -68,11 +68,11 @@
         {
             "name": "LogoForStuff",
             "text": "You and Me",
-            "font_size": "48",
+            "font_size": "48px",
             "text_color": "#bbeeee",
             "background_color": "#224400",
             "border_color": "#000033",
-            "border_radius": 1,
+            "border_radius": "1",
             "border_thickness": 12,
             "padding": 5,
             "margin": 10

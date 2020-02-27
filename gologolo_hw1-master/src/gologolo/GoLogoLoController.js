@@ -16,10 +16,13 @@ export default class GoLogoLoController
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON,AppsterHTML.CLICK, this[GoLogoLoCallback.GOLOGOLO_PROCESS_EDIT_ENTER_BUTTON])
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON,AppsterHTML.CLICK,this[GoLogoLoCallback.GOLOGOLO_PROCESS_EDIT_CANCEL_BUTTON]);
         
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_FONT_SIZE_SLIDER]);//slider
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_TEXT_COLOR_PICKER]);//slider
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BACKGROUND_COLOR_PICKER]);//slider
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_COLOR_PICKER]);//slider
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_FONT_SIZE_SLIDER]);//sliders and pickers
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_TEXT_COLOR_PICKER]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BACKGROUND_COLOR_PICKER]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_COLOR_PICKER]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_RADIUS_SLIDER]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER,AppsterHTML.INPUT,this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_THICKNESS_SLIDER]);
+
 
     }   
     
@@ -77,6 +80,16 @@ export default class GoLogoLoController
 
         let colorVal=document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER).value;
         this.model.getCurrentWork().setBorderColor(colorVal);
+        this.model.view.loadWork(this.model.getCurrentWork());
+    }
+    processBorderRadius=()=>{
+        let sliderValue=document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER).value;
+        this.model.getCurrentWork().setBorderRadius(sliderValue);
+        this.model.view.loadWork(this.model.getCurrentWork());
+    }
+    processBorderThickness=()=>{
+        let sliderValue=document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER).value;
+        this.model.getCurrentWork().setBorderThickness(sliderValue);
         this.model.view.loadWork(this.model.getCurrentWork());
     }
 }
