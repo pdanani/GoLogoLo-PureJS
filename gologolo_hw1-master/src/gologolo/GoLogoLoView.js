@@ -77,7 +77,10 @@ export default class GoLogoLoView extends AppsterView {
         textColorPicker.value = work.getTextColor();
         let backgroundColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER);
         backgroundColorPicker.value = work.getBackgroundColor();
+        
         let borderColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER);
+        //borderColorPicker.setAttribute('border-style','solid');   //to deal with min
+        //document.getElementById("myDiv").style.border = "thin dotted red"; 
         borderColorPicker.value = work.getBorderColor();
         let borderRadiusSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER);
         borderRadiusSlider.value = work.getBorderRadius();
@@ -97,6 +100,7 @@ export default class GoLogoLoView extends AppsterView {
         textDiv.style.color = work.getTextColor();
         textDiv.style.fontSize = work.getFontSize();//added font size to style load
         textDiv.style.backgroundColor = work.getBackgroundColor();
+        textDiv.style.border="solid";
         textDiv.style.borderColor = work.getBorderColor();
         textDiv.style.borderRadius = work.getBorderRadius();
         textDiv.style.borderThickness = work.getBorderThickness();

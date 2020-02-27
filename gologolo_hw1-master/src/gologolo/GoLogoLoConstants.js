@@ -1,7 +1,7 @@
 
 export const GoLogoLoDefaults = {
     GOLOGOLO_DEFAULT_TEXT: "GoLogoLo",
-    GOLOGOLO_DEFAULT_FONT_SIZE: "20px",
+    GOLOGOLO_DEFAULT_FONT_SIZE: "20",
     GOLOGOLO_DEFAULT_TEXT_COLOR: "#000000",
     GOLOGOLO_DEFAULT_BACKGROUND_COLOR: "#cccc44",
     GOLOGOLO_DEFAULT_BORDER_COLOR: "#444444",
@@ -24,7 +24,10 @@ export const GoLogoLoCallback = {
      GOLOGOLO_PROCESS_EDIT_ENTER_BUTTON: "processEditEnter",
      GOLOGOLO_PROCESS_EDIT_CANCEL_BUTTON: "processEditCancel",
      //slider
-     GOLOGOLO_PROCESS_FONT_SIZE_SLIDER: "processFontSlider"
+     GOLOGOLO_PROCESS_FONT_SIZE_SLIDER: "processFontSlider",
+     GOLOGOLO_PROCESS_TEXT_COLOR_PICKER: "processTextColor",
+     GOLOGOLO_PROCESS_BACKGROUND_COLOR_PICKER: "processBackgroundColor",
+     GOLOGOLO_PROCESS_BORDER_COLOR_PICKER: "processBorderColor"
 
 }
 export const GoLogoLoGUIId = {

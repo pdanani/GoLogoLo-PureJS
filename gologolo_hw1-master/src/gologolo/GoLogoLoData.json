@@ -44,7 +44,7 @@
         {
             "name": "My First Logo",
             "text": "ABC",
-            "font_size": "30px",
+            "font_size": "30",
             "text_color": "#123456",
             "background_color": "#654321",
             "border_color": "#abcdef",
@@ -56,7 +56,7 @@
         {
             "name": "HomepageLogo",
             "text": "123",
-            "font_size": "16px",
+            "font_size": "16",
             "text_color": "#13579b",
             "background_color": "#b97531",
             "border_color": "#004488",
@@ -68,7 +68,7 @@
         {
             "name": "LogoForStuff",
             "text": "You and Me",
-            "font_size": "48px",
+            "font_size": "48",
             "text_color": "#bbeeee",
             "background_color": "#224400",
             "border_color": "#000033",
